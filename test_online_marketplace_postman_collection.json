@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "addad342-a1cf-43be-9ac8-ac5d61d5ea4e",
+		"name": "test_online_marketplace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5009/api/v1/products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"id\": 1,\n\t\t\"name\": \"John Kerry\",\n\t\t\"email\": \"john.kerry@gmail.com\",\n\t\t\"phone\": \"6475547788\",\n\t\t\"Country\": \"Canada\"\n\t},\n\t{\n\t\t\"id\": 2,\n\t\t\"name\": \"Nancy Fedral\",\n\t\t\"email\": \"nancy.fedral@gmail.com\",\n\t\t\"phone\": \"6477763587\",\n\t\t\"Country\": \"Canada\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/app/products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"product_id\": 10002,\n        \"title\": \"Macbook Air 2017\",\n        \"price\": 1099.99,\n        \"inventory_count\": 20\n    },\n    {\n        \"product_id\": 10005,\n        \"title\": \"Dell Inspiration 710\",\n        \"price\": 399.99,\n        \"inventory_count\": 51\n    },\n    {\n        \"product_id\": 10006,\n        \"title\": \"Dell XPS 17\",\n        \"price\": 2399.99,\n        \"inventory_count\": 0\n    },\n    {\n        \"product_id\": 10007,\n        \"title\": \"ASUS B9440UA-US51 Notebook\",\n        \"price\": 399.99,\n        \"inventory_count\": 0\n    },\n    {\n        \"product_id\": 10003,\n        \"title\": \"Lenova Yoga 730\",\n        \"price\": 899.59,\n        \"inventory_count\": 30\n    },\n    {\n        \"product_id\": 10001,\n        \"title\": \"Macbook Pro 2015\",\n        \"price\": 2899.99,\n        \"inventory_count\": 3\n    },\n    {\n        \"product_id\": 10004,\n        \"title\": \"Lenova Legion Y530\",\n        \"price\": 1499.99,\n        \"inventory_count\": 10\n    },\n    {\n        \"product_id\": 10008,\n        \"title\": \"Dell XPS 15\",\n        \"price\": 2199.99,\n        \"inventory_count\": 0\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/v1/products?available=1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\t\"id\": 1,\n\t\t\"name\": \"John Kerry\",\n\t\t\"email\": \"john.kerry@gmail.com\",\n\t\t\"phone\": \"6475547788\",\n\t\t\"Country\": \"Canada\"\n\t},\n\t{\n\t\t\"id\": 2,\n\t\t\"name\": \"Nancy Fedral\",\n\t\t\"email\": \"nancy.fedral@gmail.com\",\n\t\t\"phone\": \"6477763587\",\n\t\t\"Country\": \"Canada\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products?available=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "available",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "http://localhost:5000/api/v1/app/products",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"product_id\": 10002,\n        \"title\": \"Macbook Air 2017\",\n        \"price\": 1099.99,\n        \"inventory_count\": 20\n    },\n    {\n        \"product_id\": 10005,\n        \"title\": \"Dell Inspiration 710\",\n        \"price\": 399.99,\n        \"inventory_count\": 51\n    },\n    {\n        \"product_id\": 10006,\n        \"title\": \"Dell XPS 17\",\n        \"price\": 2399.99,\n        \"inventory_count\": 0\n    },\n    {\n        \"product_id\": 10007,\n        \"title\": \"ASUS B9440UA-US51 Notebook\",\n        \"price\": 399.99,\n        \"inventory_count\": 0\n    },\n    {\n        \"product_id\": 10003,\n        \"title\": \"Lenova Yoga 730\",\n        \"price\": 899.59,\n        \"inventory_count\": 30\n    },\n    {\n        \"product_id\": 10001,\n        \"title\": \"Macbook Pro 2015\",\n        \"price\": 2899.99,\n        \"inventory_count\": 3\n    },\n    {\n        \"product_id\": 10004,\n        \"title\": \"Lenova Legion Y530\",\n        \"price\": 1499.99,\n        \"inventory_count\": 10\n    },\n    {\n        \"product_id\": 10008,\n        \"title\": \"Dell XPS 15\",\n        \"price\": 2199.99,\n        \"inventory_count\": 0\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+
+	]
+}
